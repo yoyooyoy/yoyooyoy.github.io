@@ -466,6 +466,9 @@
 		width: 80px;
 		height: 80px;
 	}
+	.ball , .ball2 , .ball3{
+		display:none;
+	}
 }
 /*------------------*/
 /*animate
