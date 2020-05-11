@@ -398,7 +398,7 @@
 --------------------*/
 .Quote{
 	width: 100%;
-	padding-top: 100px;
+	padding-top: 200px;
 	padding-bottom: 200px;
 }
 .Quote__Icon:after{
@@ -424,17 +424,7 @@
 	top: 50%;
 	animation: rotate 7s linear infinite;
 }
-@keyframes rotate {
-	0%{
-		transform: translate(-50%,-50%) rotateZ(0deg);
-	}
-	/*50%{
-		transform: translate(-50%,-50%) rotateZ(180deg);
-	}*/
-	100%{
-		transform: translate(-50%,-50%) rotateZ(180deg);
-	}
-}
+
 .Quote .Quote__Icon{
 	width: 70px;
 	height: 70px;
@@ -476,6 +466,60 @@
 		width: 80px;
 		height: 80px;
 	}
+}
+/*------------------*/
+/*animate
+--------------------*/
+@keyframes rotate {
+	0%{
+		transform: translate(-50%,-50%) rotateZ(0deg);
+	}
+	/*50%{
+		transform: translate(-50%,-50%) rotateZ(180deg);
+	}*/
+	100%{
+		transform: translate(-50%,-50%) rotateZ(180deg);
+	}
+}
+.ball , .ball2 , .ball3{
+	background-color: #484848;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50% , -50%);
+	z-index: 2;
+}
+.ball{
+	width: 20px;
+	height: 20px;
+}
+.ball2{
+	width: 10px;
+	height: 10px;
+}
+.ball3{
+	width: 15px;
+	height: 15px;
+}
+.marker {
+  offset-path: path('M 0 -10 m -300, 0 a 4,4 0 1,0 600,0 a 4,4 0 1,0 -600,0');
+  animation: move 8s linear infinite;
+}
+.marker2 {
+  offset-path: path('M 0 5 m -195, 0 a 4,4 0 1,0 400,0 a 4,4 0 1,0 -400,0');
+  animation: move 6s linear infinite;
+}
+.marker3{
+	offset-path: path('M 0 -5 m -220, 0 a 4,4 0 1,0 450,0 a 4,4 0 1,0 -450,0');
+  animation: move 7s linear infinite;
+}
+
+@keyframes move {
+  100% { 
+    motion-offset: 100%;
+    offset-distance: 100%;
+  }
 }
 /*------------------*/
 /*$Skill
